@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="163dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="78dp"
+        android:focusable="true"
+        android:onClick="onClick"
+        android:text="track Goal One"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="163dp"
+        android:layout_height="64dp"
+        android:onClick="onClick"
+        android:text="track Goal Two"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button1" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="163dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="224dp"
+        android:onClick="onClick"
+        android:text="track Goal three"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:scrollbars = "vertical"
+        android:id="@+id/stats"
+        android:layout_width="275dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="24dp"
+        android:text="Goal Statistics:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCalc"
+        app:layout_constraintVertical_bias="0.883" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="321dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="32dp"
+        android:text="Track Your Monthly Goal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/goalOneText"
+        android:layout_width="159dp"
+        android:layout_height="37dp"
+        android:text="Goal One"
+        app:layout_constraintBottom_toTopOf="@+id/button1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/goalTwoText"
+        android:layout_width="159dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="21dp"
+        android:text="Goal Two"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button1" />
+
+    <TextView
+        android:id="@+id/goalThreeText"
+        android:layout_width="159dp"
+        android:layout_height="37dp"
+        android:text="Goal Three"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+    <Button
+        android:id="@+id/changeG3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="160dp"
+        android:text="Change"
+        app:layout_constraintBottom_toTopOf="@+id/stats"
+        app:layout_constraintEnd_toStartOf="@+id/goalThreeText"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/changeG2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="108dp"
+        android:text="Change"
+        app:layout_constraintBottom_toTopOf="@+id/changeG3"
+        app:layout_constraintEnd_toStartOf="@+id/goalTwoText"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/changeG1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="91dp"
+        android:text="Change"
+        app:layout_constraintBottom_toTopOf="@+id/changeG2"
+        app:layout_constraintEnd_toStartOf="@+id/goalOneText"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/buttonCalc"
+        android:layout_width="272dp"
+        android:layout_height="50dp"
+        android:text="Calculate Success"
+        android:onClick="changeGoalText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3"
+        app:layout_constraintVertical_bias="0.385" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
